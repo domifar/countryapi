@@ -1,0 +1,5 @@
+export const getLocation = (name) =>{
+    return fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${name}`)
+    .then(response => response.json())
+    .then(json => json.results || [])
+}
